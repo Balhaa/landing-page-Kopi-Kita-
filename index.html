@@ -4,292 +4,682 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kopi Kita asmara</title>
-    <!-- Anda akan menambahkan link ke file CSS di sini nanti -->
-    <!-- Google Fonts -->
+    <title>Kopi Kita Asmara — Artisan Specialty Coffee & Roastery</title>
+    <meta name="description" content="Kopi Kita Asmara menyajikan pengalaman specialty coffee mewah dalam suasana temaram hangat, single origin pilihan, dan artisan roastery.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display / Cormorant Garamond -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.321.0/font/lucide.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>Kopi Kita asmara</h1>
-            <nav>
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-icon">☕</span>
+                <span class="brand-name">Kopi Kita <span class="brand-highlight">Asmara</span></span>
+            </a>
+            
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Buka Menu Navigasi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navbar">
                 <ul>
-                    <li><a href="#hero">Beranda</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#experience">Pengalaman</a></li>
-                    <li><a href="#about-us">Tentang Kami</a></li>
-                    <li><a href="#reviews">Testimoni</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#hero" class="nav-link active">Beranda</a></li>
+                    <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+                    <li><a href="#menu" class="nav-link">Menu Signature</a></li>
+                    <li><a href="#signature-pairing" class="nav-link">Pairing</a></li>
+                    <li><a href="#about-us" class="nav-link">Tentang</a></li>
+                    <li><a href="#reviews" class="nav-link">Testimoni</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta">Reservasi</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="hero">
-            <div class="container">
+            <div class="hero-overlay"></div>
+            <div class="container hero-layout">
                 <div class="hero-content">
-                    <span class="hero-eyebrow">Signature Specialty Coffee</span>
-                    <h2>Nikmati Setiap Tegukan</h2>
-                    <p>Kopi pilihan terbaik, diseduh dengan cinta dan keahlian. Kami menghadirkan rasa autentik dengan
-                        teknik sangrai khusus yang memaksimalkan aroma.</p>
-                    <div class="hero-tags">
-                        <span>Single Origin</span>
-                        <span>Manual Brew Lab</span>
-                        <span>Chef Pairing</span>
+                    <div class="hero-badge animate-fade-down">
+                        <span class="badge-dot"></span>
+                        <span>Artisan Roastery & Coffee Sanctuary</span>
                     </div>
-                    <div class="hero-buttons">
-                        <a href="#menu" class="cta-button">Lihat Menu Kami</a>
-                        <a href="#contact" class="cta-button secondary-cta">Kunjungi Kami</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="container animated">
-            <h2 class="section-title">Pengalaman Kopi Premium</h2>
-            <div class="experience-grid">
-                <article class="experience-card">
-                    <h3>Roasting Lab</h3>
-                    <p>Biji kopi pilihan dipanggang presisi dengan profil rasa yang disesuaikan oleh roaster
-                        bersertifikat.</p>
-                    <ul>
-                        <li>Batch roasting harian</li>
-                        <li>Profil rasa transparan</li>
-                        <li>Workshop edukasi</li>
-                    </ul>
-                </article>
-                <article class="experience-card">
-                    <h3>Signature Bar</h3>
-                    <p>Terhubung langsung dengan barista untuk eksplorasi rasa melalui manual brew dan coffee pairing.
+                    <h1 class="hero-title animate-fade-up">
+                        Ruang Teduh untuk <br><span class="text-gold-gradient">Setiap Kisah & Rasa.</span>
+                    </h1>
+                    <p class="hero-desc animate-fade-up delay-1">
+                        Diseduh dengan cinta, teknik presisi, dan biji kopi single origin terbaik dunia. Temukan harmoni aroma pekat dalam suasana malam yang syahdu dan intim.
                     </p>
-                    <ul>
-                        <li>Manual brew flight</li>
-                        <li>Latte art theater</li>
-                        <li>Mocktail kopi eksklusif</li>
-                    </ul>
-                </article>
-                <article class="experience-card">
-                    <h3>Community Hub</h3>
-                    <p>Ruang hangat untuk kolaborasi, live music, dan event komunitas pecinta kopi.</p>
-                    <ul>
-                        <li>Live music mingguan</li>
-                        <li>Pop-up artisan</li>
-                        <li>Member lounge privat</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section id="stats" class="highlight-strip animated">
-            <div class="container stats-container">
-                <div class="stat">
-                    <span class="stat-value" data-target="32">0</span>
-                    <p>Single Origin dari 4 Benua</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-value" data-target="1200">0</span>
-                    <p>Member Komunitas Aktif</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-value" data-target="24">0</span>
-                    <p>Menu Signature Rekomendasi Barista</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-value" data-target="15">0</span>
-                    <p>Workshop & Cupping per Bulan</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="menu" class="container">
-            <h2 class="section-title animated">Menu Kami</h2>
-            <div class="menu-grid">
-                <div class="menu-item animated">
-                    <img src="images/coffe.jpg" alt="Espresso" class="menu-item-image">
-                    <h3>Espresso</h3>
-                    <p>Kopi pekat dengan crema sempurna. Rp 25.000</p>
-                </div>
-                <div class="menu-item animated">
-                    <img src="images/coffe.jpg" alt="Cappuccino" class="menu-item-image">
-                    <h3>Cappuccino</h3>
-                    <p>Perpaduan espresso, susu panas, dan busa susu. Rp 35.000</p>
-                </div>
-                <div class="menu-item animated">
-                    <img src="images/coffe.jpg" alt="Latte" class="menu-item-image">
-                    <h3>Latte</h3>
-                    <p>Espresso dengan susu steamed yang lembut. Rp 35.000</p>
-                </div>
-                <div class="menu-item animated">
-                    <img src="images/coffe.jpg" alt="Croissant" class="menu-item-image">
-                    <h3>Croissant</h3>
-                    <p>Pastry renyah teman minum kopi Anda. Rp 20.000</p>
-                </div>
-            </div>
-            <div class="menu-cta">
-                <p>Ingin rekomendasi personal dari barista kami?</p>
-                <a href="#contact" class="cta-button secondary-cta">Reservasi Coffee Tasting</a>
-            </div>
-        </section>
-
-        <section id="signature-pairing" class="container animated">
-            <div class="pairing-wrapper">
-                <div class="pairing-intro">
-                    <h2 class="section-title">Signature Pairing</h2>
-                    <p>Jelajahi pasangan menu curated yang memaksimalkan rasa kopi Anda. Setiap pairing dikurasi oleh
-                        barista dan chef kami.</p>
-                    <a href="#contact" class="cta-button">Book Pairing Experience</a>
-                </div>
-                <div class="pairing-list">
-                    <article class="pairing-card">
-                        <h3>Midnight Honey</h3>
-                        <p>Espresso honey cold brew dengan smoked salted caramel tart.</p>
-                        <span class="badge">Favorit</span>
-                    </article>
-                    <article class="pairing-card">
-                        <h3>Zen Bloom</h3>
-                        <p>Jasmine geisha pour-over dengan citrus madeleine rosemary.</p>
-                        <span class="badge">Seasonal</span>
-                    </article>
-                    <article class="pairing-card">
-                        <h3>Forest Dawn</h3>
-                        <p>Aeropress natural Ethiopia dipasangkan dengan dark chocolate praline.</p>
-                        <span class="badge">Limited</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-us" class="container animated">
-            <div class="about-us-image">
-                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1887&auto=format&fit=crop"
-                    alt="Tentang Kami">
-            </div>
-            <div class="about-us-content">
-                <h2 class="section-title">Tentang Kami</h2>
-                <p>Nama Kedai Kopi Anda didirikan dengan semangat untuk menyajikan kopi berkualitas tinggi dan
-                    menciptakan tempat yang nyaman bagi komunitas. Kami memilih biji kopi terbaik dari seluruh dunia dan
-                    menyeduhnya dengan presisi untuk memastikan setiap cangkir adalah pengalaman yang tak terlupakan.
-                </p>
-                <p>Datang dan rasakan sendiri perbedaan di kedai kami!</p>
-                <div class="about-highlights">
-                    <div>
-                        <h3>Roastery On-Site</h3>
-                        <p>Anda bisa melihat langsung proses roasting setiap pagi.</p>
+                    <div class="hero-tags animate-fade-up delay-2">
+                        <span class="tag-chip"><i class="icon-coffee"></i> 100% Arabica Specialty</span>
+                        <span class="tag-chip"><i class="icon-flame"></i> In-House Roasting</span>
+                        <span class="tag-chip"><i class="icon-award"></i> Q-Grader Certified</span>
                     </div>
-                    <div>
-                        <h3>Academy Certified</h3>
-                        <p>Program pelatihan barista profesional dengan kurikulum internasional.</p>
+                    <div class="hero-buttons animate-fade-up delay-3">
+                        <a href="#menu" class="cta-button primary-glow">
+                            <span>Eksplorasi Menu</span>
+                            <span class="btn-arrow">&rarr;</span>
+                        </a>
+                        <a href="#contact" class="cta-button secondary-glass">
+                            <span>Kunjungi Kedai</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-showcase animate-fade-up delay-2">
+                    <div class="floating-glass-card main-card">
+                        <div class="image-wrapper">
+                            <img src="images/coffe.jpg" alt="Signature Espresso Latte" class="hero-img">
+                            <div class="steam-container">
+                                <span class="steam steam-1"></span>
+                                <span class="steam steam-2"></span>
+                                <span class="steam steam-3"></span>
+                            </div>
+                        </div>
+                        <div class="card-caption">
+                            <div>
+                                <span class="mini-label">Special Brew of the Day</span>
+                                <h4>Asmara Velvet Macchiato</h4>
+                            </div>
+                            <span class="price-tag">Rp 38k</span>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-top-right">
+                        <span class="star-rating">★ 4.9</span>
+                        <span class="star-text">Over 1,200+ Reviews</span>
+                    </div>
+                    <div class="floating-badge badge-bottom-left">
+                        <span class="pulse-indicator"></span>
+                        <span>Live Roasting Every 09:00</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="gallery" class="animated">
+        <!-- Stats Counter Section -->
+        <section id="stats" class="stats-section reveal-on-scroll">
             <div class="container">
-                <h2 class="section-title">Galeri Atmosfer</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper">🌍</div>
+                        <div class="stat-content">
+                            <span class="stat-value" data-target="32">0</span><span class="stat-plus">+</span>
+                            <p>Single Origin 4 Benua</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper">👥</div>
+                        <div class="stat-content">
+                            <span class="stat-value" data-target="1500">0</span><span class="stat-plus">+</span>
+                            <p>Komunitas Brew Society</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper">☕</div>
+                        <div class="stat-content">
+                            <span class="stat-value" data-target="28">0</span><span class="stat-plus">+</span>
+                            <p>Menu Artisan Signature</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper">🏆</div>
+                        <div class="stat-content">
+                            <span class="stat-value" data-target="99">0</span><span class="stat-plus">%</span>
+                            <p>Tingkat Kepuasan Tamu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Mengapa Kopi Kita</span>
+                    <h2 class="section-title">Dedikasi Rasa & Suasana</h2>
+                    <p class="section-subtitle">Lebih dari sekadar secangkir kafein, kami merancang ruang berkesan untuk inspirasi dan kedamaian Anda.</p>
+                </div>
+                <div class="experience-grid">
+                    <article class="experience-card glass-panel interactive-tilt">
+                        <div class="card-glow"></div>
+                        <div class="icon-box">🔥</div>
+                        <h3>Artisan Roastery Lab</h3>
+                        <p>Biji kopi pilihan disangrai dalam batch kecil harian oleh roaster bersertifikat untuk mempertahankan kompleksitas rasa alami.</p>
+                        <ul class="feature-checklist">
+                            <li><span class="check-icon">✓</span> Profil sangrai segar harian</li>
+                            <li><span class="check-icon">✓</span> Transparansi asal perkebunan</li>
+                            <li><span class="check-icon">✓</span> Cupping session edukatif mingguan</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-card glass-panel interactive-tilt featured-card">
+                        <div class="card-glow"></div>
+                        <div class="corner-ribbon">Rekomendasi</div>
+                        <div class="icon-box">🧪</div>
+                        <h3>Manual Slow Bar</h3>
+                        <p>Duduk santai di depan barista kami. Pilih metode seduh V60, Chemex, Aeropress, atau Syphon sesuai nuansa rasa yang Anda inginkan.</p>
+                        <ul class="feature-checklist">
+                            <li><span class="check-icon">✓</span> Tasting notes eksploratif</li>
+                            <li><span class="check-icon">✓</span> Barista hospitality personal</li>
+                            <li><span class="check-icon">✓</span> Seasonal Geisha & rare beans</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-card glass-panel interactive-tilt">
+                        <div class="card-glow"></div>
+                        <div class="icon-box">🕯️</div>
+                        <h3>Warm Acoustic Sanctuary</h3>
+                        <p>Pencahayaan temaram hangat, playlist lofi-jazz akustik lembut, serta colokan & Wi-Fi cepat untuk ruang kerja sekaligus rileks.</p>
+                        <ul class="feature-checklist">
+                            <li><span class="check-icon">✓</span> Suasana tenang bebas bising</li>
+                            <li><span class="check-icon">✓</span> Live acoustic akhir pekan</li>
+                            <li><span class="check-icon">✓</span> Sudut bacaan buku kurasi</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section with Filter Tabs -->
+        <section id="menu" class="section-padding reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Pilihan Terfavorit</span>
+                    <h2 class="section-title">Koleksi Menu Pilihan</h2>
+                    <p class="section-subtitle">Dibuat dari bahan-bahan organik dan susu murni berkualitas tinggi.</p>
+                    
+                    <!-- Menu Category Filter -->
+                    <div class="menu-filters">
+                        <button class="filter-btn active" data-filter="all">Semua</button>
+                        <button class="filter-btn" data-filter="coffee">Signature Coffee</button>
+                        <button class="filter-btn" data-filter="manual">Manual Brew</button>
+                        <button class="filter-btn" data-filter="pastry">Pastry & Tart</button>
+                    </div>
+                </div>
+
+                <div class="menu-grid" id="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item glass-panel" data-category="coffee">
+                        <div class="menu-image-container">
+                            <img src="images/coffe.jpg" alt="Asmara Signature Espresso" class="menu-item-image">
+                            <span class="item-tag">Signature</span>
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="item-top">
+                                <h3>Espresso Concentré</h3>
+                                <span class="item-price">Rp 25.000</span>
+                            </div>
+                            <p class="item-desc">Double shot ekstraksi pekat dengan krema keemasan tebal, menyajikan notes dark cocoa dan hazelnut.</p>
+                            <div class="item-footer">
+                                <span class="intensity-label">Intensitas: ★★★★★</span>
+                                <button class="btn-order-quick" data-item="Espresso Concentré" title="Pesan sekarang">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item glass-panel" data-category="coffee">
+                        <div class="menu-image-container">
+                            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=800&auto=format&fit=crop" alt="Golden Velvet Cappuccino" class="menu-item-image">
+                            <span class="item-tag">Favorit</span>
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="item-top">
+                                <h3>Velvet Cappuccino</h3>
+                                <span class="item-price">Rp 35.000</span>
+                            </div>
+                            <p class="item-desc">Perpaduan seimbang espresso premium dengan microfoam susu lembut bertekstur sutra dan taburan kayu manis.</p>
+                            <div class="item-footer">
+                                <span class="intensity-label">Intensitas: ★★★☆☆</span>
+                                <button class="btn-order-quick" data-item="Velvet Cappuccino" title="Pesan sekarang">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-item glass-panel" data-category="coffee">
+                        <div class="menu-image-container">
+                            <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=800&auto=format&fit=crop" alt="Spanish Salted Caramel Latte" class="menu-item-image">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="item-top">
+                                <h3>Salted Caramel Latte</h3>
+                                <span class="item-price">Rp 38.000</span>
+                            </div>
+                            <p class="item-desc">Espresso halus dibalut karamel bakar gurih rumahan, susu oat lembut, dan taburan sea salt flakes.</p>
+                            <div class="item-footer">
+                                <span class="intensity-label">Intensitas: ★★★☆☆</span>
+                                <button class="btn-order-quick" data-item="Salted Caramel Latte" title="Pesan sekarang">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-item glass-panel" data-category="manual">
+                        <div class="menu-image-container">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop" alt="Single Origin V60 Pour Over" class="menu-item-image">
+                            <span class="item-tag">Single Origin</span>
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="item-top">
+                                <h3>Ethiopia Yirgacheffe V60</h3>
+                                <span class="item-price">Rp 42.000</span>
+                            </div>
+                            <p class="item-desc">Diseduh manual pour over. Menghasilkan karakter rasa bersih, aroma melati, dan sentuhan buah peach segar.</p>
+                            <div class="item-footer">
+                                <span class="intensity-label">Intensitas: ★★☆☆☆</span>
+                                <button class="btn-order-quick" data-item="Ethiopia Yirgacheffe V60" title="Pesan sekarang">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="menu-item glass-panel" data-category="pastry">
+                        <div class="menu-image-container">
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop" alt="Artisan Butter Croissant" class="menu-item-image">
+                            <span class="item-tag">Fresh Baked</span>
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="item-top">
+                                <h3>French Butter Croissant</h3>
+                                <span class="item-price">Rp 26.000</span>
+                            </div>
+                            <p class="item-desc">Kue pastry renyah berlapis dengan aroma butter Prancis autentik, dipanggang hangat segar setiap pagi.</p>
+                            <div class="item-footer">
+                                <span class="intensity-label">Pairing: Cappuccino / Latte</span>
+                                <button class="btn-order-quick" data-item="French Butter Croissant" title="Pesan sekarang">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="menu-item glass-panel" data-category="pastry">
+                        <div class="menu-image-container">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop" alt="Dark Truffle Tart" class="menu-item-image">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="item-top">
+                                <h3>Dark Truffle Tart</h3>
+                                <span class="item-price">Rp 32.000</span>
+                            </div>
+                            <p class="item-desc">Tart cokelat hitam 72% Valrhona dengan sentuhan espresso glaze dan tekstur ganache lumer.</p>
+                            <div class="item-footer">
+                                <span class="intensity-label">Pairing: Espresso / Americano</span>
+                                <button class="btn-order-quick" data-item="Dark Truffle Tart" title="Pesan sekarang">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-cta-bar glass-panel">
+                    <div class="cta-inner">
+                        <div class="cta-icon">✨</div>
+                        <div>
+                            <h4>Ingin Mencoba Menu Tasting Barista?</h4>
+                            <p>Dapatkan sensasi 3 varian brew flight dengan panduan langsung head barista kami.</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button primary-glow">Reservasi Tasting Bar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Pairing Section -->
+        <section id="signature-pairing" class="section-padding pairing-section reveal-on-scroll">
+            <div class="container">
+                <div class="pairing-wrapper">
+                    <div class="pairing-intro">
+                        <span class="section-eyebrow">Harmoni Rasa</span>
+                        <h2 class="section-title">The Art of Pairing</h2>
+                        <p>Setiap cangkir kopi memiliki pasangan kuliner yang mampu mengeluarkan spektrum aroma tersembunyi. Diciptakan bersama antara pastry chef dan Q-grader kami.</p>
+                        
+                        <div class="pairing-highlight-box">
+                            <div class="quote-mark">“</div>
+                            <p>Rasa manis yang seimbang akan melembutkan keasaman kopi, sedangkan kepahitan elegan menyempurnakan rasa mentega gurih.</p>
+                        </div>
+
+                        <a href="#contact" class="cta-button primary-glow">Pesan Sesi Pairing</a>
+                    </div>
+
+                    <div class="pairing-list">
+                        <article class="pairing-card glass-panel">
+                            <div class="pairing-badge">Signature Pair</div>
+                            <div class="pair-number">01</div>
+                            <div class="pair-details">
+                                <h3>Midnight Honey & Caramel Tart</h3>
+                                <p class="pair-sub">Cold brew maceration madu liar disandingkan dengan tart karamel asin panggang.</p>
+                                <span class="flavor-profile">Notes: Wild Honey • Sea Salt • Cocoa</span>
+                            </div>
+                        </article>
+
+                        <article class="pairing-card glass-panel">
+                            <div class="pairing-badge seasonal">Seasonal</div>
+                            <div class="pair-number">02</div>
+                            <div class="pair-details">
+                                <h3>Zen Bloom & Citrus Madeleine</h3>
+                                <p class="pair-sub">Jasmine Geisha pour-over ditemani kue madeleine lembut dengan infuse rosemary & lemon zest.</p>
+                                <span class="flavor-profile">Notes: Jasmine Blossom • Bergamot • Crisp Lemon</span>
+                            </div>
+                        </article>
+
+                        <article class="pairing-card glass-panel">
+                            <div class="pairing-badge limited">Rare Edition</div>
+                            <div class="pair-number">03</div>
+                            <div class="pair-details">
+                                <h3>Forest Dawn & 75% Dark Truffle</h3>
+                                <p class="pair-sub">Aeropress Natural Sidama dipasangkan dengan praline cokelat hitam hutan tropis.</p>
+                                <span class="flavor-profile">Notes: Wild Berry • Dark Ganache • Cedar</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="section-padding reveal-on-scroll">
+            <div class="container about-grid">
+                <div class="about-us-visual">
+                    <div class="visual-frame">
+                        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1887&auto=format&fit=crop"
+                            alt="Suasana Kedai Kopi Kita Asmara" class="about-main-img">
+                        <div class="experience-badge">
+                            <span class="exp-number">7+</span>
+                            <span class="exp-text">Tahun Menemani Pecinta Kopi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-us-content">
+                    <span class="section-eyebrow">Cerita di Balik Cangkir</span>
+                    <h2 class="section-title">Lahir dari Cinta pada Aroma & Kebersamaan</h2>
+                    <p class="about-lead">
+                        <strong>Kopi Kita Asmara</strong> bermula dari sebuah garasi kecil di tahun 2018. Kami percaya bahwa secangkir kopi yang baik bukan sekadar bahan minuman, melainkan jembatan percakapan bermakna.
+                    </p>
+                    <p class="about-text">
+                        Kami menjalin kemitraan erat langsung dengan petani kopi lokal di Gayo, Toraja, Mandheling, hingga Kintamani. Proses sangrai dilakukan di hadapan Anda setiap fajar menyingsing, menjaga kesegaran yang mutlak.
+                    </p>
+
+                    <div class="about-highlights-grid">
+                        <div class="highlight-item glass-panel">
+                            <div class="highlight-icon">🌱</div>
+                            <div>
+                                <h4>Fair-Trade Direct Farm</h4>
+                                <p>Mendukung kesejahteraan petani lokal melalui rantai pasok etis.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item glass-panel">
+                            <div class="highlight-icon">🎓</div>
+                            <div>
+                                <h4>Barista Academy</h4>
+                                <p>Standar seduh bersertifikasi SCA demi konsistensi rasa sempurna.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atmospheric Gallery Section -->
+        <section id="gallery" class="section-padding gallery-section reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Visual Sanctuary</span>
+                    <h2 class="section-title">Atmosfer yang Menghangatkan</h2>
+                    <p class="section-subtitle">Setiap sudut diciptakan agar Anda merasa betah berlama-lama.</p>
+                </div>
+
                 <div class="gallery-grid">
-                    <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=1887&auto=format&fit=crop"
-                        alt="Barista">
-                    <img src="https://images.unsplash.com/photo-1507568237455-0325dc48b56c?q=80&w=1888&auto=format&fit=crop"
-                        alt="Interior Kedai">
-                    <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1887&auto=format&fit=crop"
-                        alt="Manual Brew">
-                    <img src="https://images.unsplash.com/photo-1520442111903-60c2f3ddcd4e?q=80&w=1887&auto=format&fit=crop"
-                        alt="Dessert Pairing">
+                    <div class="gallery-item glass-panel">
+                        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=1887&auto=format&fit=crop"
+                            alt="Barista Sedang Menuang Kopi" loading="lazy">
+                        <div class="gallery-caption">
+                            <span>The Craft</span>
+                            <h4>Barista Passion in Action</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item glass-panel">
+                        <img src="https://images.unsplash.com/photo-1507568237455-0325dc48b56c?q=80&w=1888&auto=format&fit=crop"
+                            alt="Interior Kedai Kopi Hangat" loading="lazy">
+                        <div class="gallery-caption">
+                            <span>The Space</span>
+                            <h4>Warm Ambient Corners</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item glass-panel">
+                        <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1887&auto=format&fit=crop"
+                            alt="Manual Brew Extraction" loading="lazy">
+                        <div class="gallery-caption">
+                            <span>The Science</span>
+                            <h4>Precision Extraction</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item glass-panel">
+                        <img src="https://images.unsplash.com/photo-1520442111903-60c2f3ddcd4e?q=80&w=1887&auto=format&fit=crop"
+                            alt="Pastry and Coffee Moments" loading="lazy">
+                        <div class="gallery-caption">
+                            <span>The Pairing</span>
+                            <h4>Sweet Indulgence</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="reviews" class="container animated">
-            <h2 class="section-title">Apa Kata Mereka</h2>
-            <div class="reviews-slider">
-                <article class="review-card is-active">
-                    <p>"Rasa kopinya kompleks tapi seimbang. Barista sangat ramah menjelaskan karakter setiap biji."</p>
-                    <div class="review-meta">
-                        <span class="name">Dina Putri</span>
-                        <span class="role">Coffee Enthusiast</span>
+        <!-- Testimonials Slider Section -->
+        <section id="reviews" class="section-padding reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Suara Pelanggan</span>
+                    <h2 class="section-title">Apa Kata Mereka</h2>
+                    <p class="section-subtitle">Kisah nyata dari para penikmat setia Kopi Kita Asmara.</p>
+                </div>
+
+                <div class="reviews-slider-wrapper glass-panel">
+                    <div class="reviews-slider" id="reviews-slider">
+                        <article class="review-card is-active">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"Rasa kopinya luar biasa bersih dan seimbang. Barista dengan ramah menerangkan proses pasca panen biji kopi yang saya pesan. Suasana malamnya membuat lupa waktu."</p>
+                            <div class="review-author">
+                                <div class="author-avatar">DP</div>
+                                <div class="review-meta">
+                                    <span class="name">Dina Putri</span>
+                                    <span class="role">Coffee Enthusiast & Writer</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"Tempat favorit saya untuk deep work maupun meeting santai dengan klien. Salted Caramel Latte dan Croissant-nya juara tanpa tanding. Desain interiornya sangat berkelas!"</p>
+                            <div class="review-author">
+                                <div class="author-avatar">RW</div>
+                                <div class="review-meta">
+                                    <span class="name">Rafi Wiranegara</span>
+                                    <span class="role">Creative Director</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-quote">"Workshop cupping dan roasting-nya membuka wawasan baru bagi komunitas kami. Sangat transparan soal origin biji kopi. Definitely the best specialty coffee shop in town!"</p>
+                            <div class="review-author">
+                                <div class="author-avatar">KN</div>
+                                <div class="review-meta">
+                                    <span class="name">Komunitas Kopi Nusantara</span>
+                                    <span class="role">Community Partner</span>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="review-card">
-                    <p>"Tempat terbaik untuk rapat kreatif. Menu pairing-nya unik, membuat klien kami terkesan."</p>
-                    <div class="review-meta">
-                        <span class="name">Rafi Wiranegara</span>
-                        <span class="role">Creative Director</span>
+
+                    <div class="slider-nav">
+                        <div class="slider-dots" id="slider-dots">
+                            <button class="dot is-active" aria-label="Slide 1"></button>
+                            <button class="dot" aria-label="Slide 2"></button>
+                            <button class="dot" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="slider-arrows">
+                            <button class="slider-btn prev" id="slider-prev" aria-label="Testimoni sebelumnya">&#10094;</button>
+                            <button class="slider-btn next" id="slider-next" aria-label="Testimoni selanjutnya">&#10095;</button>
+                        </div>
                     </div>
-                </article>
-                <article class="review-card">
-                    <p>"Workshop roasting memberi pengalaman baru buat komunitas kami. Highly recommended!"</p>
-                    <div class="review-meta">
-                        <span class="name">Komunitas Kopi Nusantara</span>
-                        <span class="role">Community Partner</span>
-                    </div>
-                </article>
-                <div class="slider-controls">
-                    <button class="slider-btn prev" aria-label="Testimoni sebelumnya">&#10094;</button>
-                    <button class="slider-btn next" aria-label="Testimoni selanjutnya">&#10095;</button>
                 </div>
             </div>
         </section>
 
-        <section id="newsletter" class="highlight-strip alt animated">
-            <div class="container newsletter-wrapper">
-                <div class="newsletter-text">
-                    <h2>Gabung Klub Brew Society</h2>
-                    <p>Dapatkan undangan eksklusif untuk cupping, menu seasonal, dan pre-order limited beans.</p>
+        <!-- Newsletter Bar -->
+        <section id="newsletter" class="newsletter-section reveal-on-scroll">
+            <div class="container">
+                <div class="newsletter-card glass-panel">
+                    <div class="newsletter-content">
+                        <span class="badge-gold">Brew Society VIP</span>
+                        <h2>Bergabung dengan Klub Eksklusif</h2>
+                        <p>Dapatkan akses private cupping session, diskon biji kopi sangrai perdana, dan menu rahasia bulanan.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" id="newsletter-email" placeholder="Masukkan alamat email Anda..." required aria-label="Email">
+                            <button type="submit" class="cta-button primary-glow">Gabung Sekarang</button>
+                        </div>
+                        <span class="form-feedback" id="newsletter-feedback"></span>
+                    </form>
                 </div>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Email Anda" aria-label="Email">
-                    <button type="submit" class="cta-button">Daftar Sekarang</button>
-                </form>
             </div>
         </section>
 
-        <section id="contact" class="container animated">
-            <h2 class="section-title">Hubungi Kami</h2>
-            <div style="text-align: center; line-height: 2;">
-                <p><strong>Alamat:</strong> Jl. Kopi Nikmat No. 123, Kota Bahagia</p>
-                <p><strong>Telepon:</strong> (021) 123-4567</p>
-                <p><strong>Email:</strong> info@namakedaikopianda.com</p>
-                <p><strong>Jam Buka:</strong> Senin - Minggu, 08:00 - 22:00</p>
-            </div>
-            <div class="contact-grid">
-                <form class="contact-form">
-                    <div class="form-row">
-                        <label for="name">Nama</label>
-                        <input type="text" id="name" name="name" placeholder="Nama lengkap Anda">
+        <!-- Contact & Reservation Section -->
+        <section id="contact" class="section-padding reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-eyebrow">Rencanakan Kunjungan</span>
+                    <h2 class="section-title">Hubungi & Reservasi Meja</h2>
+                    <p class="section-subtitle">Ingin reservasi tempat atau bertanya seputar beans? Kami selalu senang menyambut Anda.</p>
+                </div>
+
+                <div class="contact-info-strip">
+                    <div class="info-pill glass-panel">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <strong>Lokasi</strong>
+                            <p>Jl. Senopati Asmara No. 45, Jakarta Selatan</p>
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Alamat email">
+                    <div class="info-pill glass-panel">
+                        <span class="info-icon">🕒</span>
+                        <div>
+                            <strong>Jam Operasional</strong>
+                            <p>Setiap Hari: 08:00 – 23:00 WIB</p>
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="message">Pesan</label>
-                        <textarea id="message" name="message" rows="5"
-                            placeholder="Ceritakan kebutuhan Anda"></textarea>
+                    <div class="info-pill glass-panel">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <strong>Kontak & WhatsApp</strong>
+                            <p>+62 812-3456-7890</p>
+                        </div>
                     </div>
-                    <button type="submit" class="cta-button">Kirim Pesan</button>
-                </form>
-                <div class="map-wrapper">
-                    <iframe title="Lokasi Kedai Kopi"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5076911239776!2d106.82496467604864!3d-6.194102893790248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e6d79953e1%3A0x8b3d94ae0088fd26!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="contact-grid">
+                    <form class="contact-form glass-panel" id="booking-form">
+                        <h3>Kirim Pesan / Booking Meja</h3>
+                        <div class="form-row">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" placeholder="cth: Arya Wiguna" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" placeholder="cth: arya@example.com" required>
+                        </div>
+                        <div class="form-row-group">
+                            <div class="form-row">
+                                <label for="date">Tanggal</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <div class="form-row">
+                                <label for="guests">Jumlah Tamu</label>
+                                <select id="guests" name="guests">
+                                    <option value="1">1 Orang</option>
+                                    <option value="2" selected>2 Orang (Intimate)</option>
+                                    <option value="4">3 - 4 Orang</option>
+                                    <option value="group">5+ Orang (Grup/Meeting)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="message">Catatan Khusus / Pesan</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Sebutkan preferensi meja (indoor/outdoor/bar) atau acara khusus..."></textarea>
+                        </div>
+                        <button type="submit" class="cta-button primary-glow submit-btn">
+                            <span>Kirim Reservasi</span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                    </form>
+
+                    <div class="map-container glass-panel">
+                        <iframe title="Lokasi Kedai Kopi Kita Asmara"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2730121110057!2d106.80489957604907!3d-6.227690793760472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f150346067a9%3A0x7d0fa028bc23910c!2sSenopati%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Quick Floating Action Button -->
+    <a href="#booking-form" class="floating-order-btn" title="Reservasi Cepat">
+        <span class="fab-icon">☕</span>
+        <span class="fab-text">Reservasi</span>
+    </a>
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Nama Kedai Kopi Anda. Semua Hak Dilindungi.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">☕ Kopi Kita <span>Asmara</span></span>
+                <p>Menghadirkan kehangatan cita rasa kopi specialty terbaik nusantara dan dunia dengan standar artisan.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#signature-pairing">Pairing</a></li>
+                    <li><a href="#about-us">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Kopi Kita Asmara. Semua Hak Dilindungi. Dibuat dengan cinta & secangkir kopi panas.</p>
+            </div>
         </div>
     </footer>
 
